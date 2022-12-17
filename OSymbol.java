@@ -1,17 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class OSymbol here.
+ * The image O for tic tac toe
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Liyu Xiao
+ * Dec 2022
  */
 public class OSymbol extends Actor
 {
-    /**
-     * Act - do whatever the OSymbol wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    GreenfootImage O = new GreenfootImage("images/o.png");
+    public OSymbol(){
+        O.scale(100,100);
+        setImage(O);
+    }
     public void act()
     {
         // Add your action code here.
