@@ -11,7 +11,7 @@ public class XSymbol extends Actor
     //resize the shape
     GreenfootImage X = new GreenfootImage("images/x.png");
     public XSymbol(){
-        X.scale(100,100);
+        X.scale(190,190);
         setImage(X);
     }
     public void act()
