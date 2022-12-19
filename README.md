@@ -1,6 +1,6 @@
 # Final Greenfoot Project
-This is the README.md file.
 
-Consider using **Markdown** syntax to format the text in this file. [Markdown basics](https://www.markdownguide.org/getting-started/)
+This game is tic tac toe but with a twist. Instead of connecting 3, players must connect 5!
+Players can also remove another players tag every 3 turns.
 
 
