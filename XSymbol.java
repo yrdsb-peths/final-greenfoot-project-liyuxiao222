@@ -9,10 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class XSymbol extends Actor
 {
     //resize the shape
-    GreenfootImage x = new GreenfootImage("images/x.png");
+    GreenfootImage X = new GreenfootImage("images/x.png");
     public XSymbol(){
-        x.scale(100,100);
-        setImage(x);
+        X.scale(190,190);
+        setImage(X);
     }
     public void act()
     {

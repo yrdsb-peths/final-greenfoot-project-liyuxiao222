@@ -8,16 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
+    GreenfootImage board = new GreenfootImage("images/board.png");
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
+        super(900, 600, 1);
         XSymbol x = new XSymbol();
-        addObject(x,300,200);
+        CircleSymbol o = new CircleSymbol();
+        addObject(x,430,135);
+        addObject(o,230,135);
     }
 }
