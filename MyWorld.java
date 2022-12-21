@@ -24,7 +24,7 @@ public class MyWorld extends World
             int x = info.getX();
             int y = info.getY();
             if(y <= 200){
-                if(x <= 430 && x >= 230){
+                if(x <= 430 && x >= 340){
                     if(sum%2 == 0){
                         addObject(O, 430,135);
                         sum ++;
@@ -34,6 +34,18 @@ public class MyWorld extends World
                         sum ++;
                     }
                 }
+                if(135 <= x && x <= 340){
+                    if(sum%2 == 0){
+                        addObject(O,235, 135);
+                    }
+                    else{
+                        addObject(X,235,135);
+                    }
+                }
+                if(430 <= x && x <= 600){
+                    
+                }
+                
             }
         }
     }
