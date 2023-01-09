@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Circle here.
+ * The Circle class, sets the image of a circle
+ * used in the board piece class
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Liyu Xiao
+ * January 9 2023
  */
 public class Circle extends Actor
 {
