@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Circle extends Actor
 {
     //Sets the image of the circle
-    GreenfootImage circle = new GreenfootImage("images/Circle.png");
+    GreenfootImage circle = new GreenfootImage("images/circle.png");
     public Circle(){
         circle.scale(145,145);
         setImage(circle);
