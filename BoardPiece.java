@@ -14,6 +14,7 @@ public class BoardPiece extends Actor
     }
     public void act()
     {
+        //checks the turn, and adds the object accordingly
         if(Greenfoot.mouseClicked(this)){
             TicTacToe game = (TicTacToe) getWorld();
             if(game.getTurn()){
