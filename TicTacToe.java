@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TicTacToe extends World
 {
-    int[][] board = new int[3][3];
     boolean xTurn = true;
     public TicTacToe()
     {    
