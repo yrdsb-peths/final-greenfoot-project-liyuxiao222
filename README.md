@@ -1,6 +1,4 @@
 # Final Greenfoot Project
 
-This game is tic tac toe but with a twist. Instead of connecting 3, players must connect 5!
-Players can also remove another players tag every 3 turns.
-
+This game is tic tac toe, click to place where you want your piece to be. X starts first.
 
