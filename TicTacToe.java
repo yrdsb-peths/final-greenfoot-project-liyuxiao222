@@ -14,6 +14,12 @@ public class TicTacToe extends World
     //keeps track of how many taken squares there are
     int sum = 0;
     
+    //whether or not game is over
+    boolean isGameOver = false;
+    
+    //timer for the transition from tic tac toe to end screen
+    SimpleTimer endTimer = new SimpleTimer();
+    
     public TicTacToe()
     {   
         //makes the board
@@ -27,6 +33,13 @@ public class TicTacToe extends World
             startTie();
         }
         play();
+        if(isGameOver && winSound.isPlaying()){
+            endTimer.mark();
+            if(endTimer.millisElapsed() > 4000){
+                EndScreen end = new EndScreen();
+                Greenfoot.setWorld(end);
+            }
+        }
     }
         
     //returns whos turn it is
@@ -64,7 +77,7 @@ public class TicTacToe extends World
                        Label gameOver = new Label("Cross wins!", 100);
                        addObject(gameOver, 2, 2);
                        winSound.play();
-                       Greenfoot.stop();
+                       isGameOver = true;
                    }
                 //checks vertically
                 else if((getObjectsAt(x,y,Cross.class).size() > 0 || 
@@ -75,7 +88,7 @@ public class TicTacToe extends World
                            Label gameOver = new Label("Cross wins!", 100);
                            addObject(gameOver, 2, 2);
                            winSound.play();
-                           Greenfoot.stop();
+                           isGameOver = true;
                     }
                 //checks diagonally
                 else if((getObjectsAt(x,y,Cross.class).size() > 0 ||
@@ -86,7 +99,7 @@ public class TicTacToe extends World
                            Label gameOver = new Label("Cross wins!", 100);
                            addObject(gameOver, 2, 2);
                            winSound.play();
-                           Greenfoot.stop();
+                           isGameOver = true;
                     }
                 //checks diagonally
                 else if((getObjectsAt(x,y,Cross.class).size() > 0 ||
@@ -97,7 +110,7 @@ public class TicTacToe extends World
                            Label gameOver = new Label("Cross wins!", 100);
                            addObject(gameOver, 2, 2);
                            winSound.play();
-                           Greenfoot.stop();
+                           isGameOver = true;
                     }
                 //checks diagonally
                 else if(getObjectsAt(x+1,y,Cross.class).size() >  0 &&
@@ -107,7 +120,7 @@ public class TicTacToe extends World
                            Label gameOver = new Label("Cross wins!", 100);
                            addObject(gameOver, 2, 2);
                            winSound.play();
-                           Greenfoot.stop(); 
+                           isGameOver = true;
                         }
         //checks if Circle win
              if((getObjectsAt(x,y,Circle.class).size() > 0 || 
@@ -118,7 +131,7 @@ public class TicTacToe extends World
                        Label gameOver = new Label("Circle wins!", 100);
                        addObject(gameOver, 2, 2);
                        winSound.play();
-                       Greenfoot.stop();
+                       isGameOver = true;
                    }
                 //checks vertically
                 else if((getObjectsAt(x,y,Circle.class).size() > 0 || 
@@ -129,7 +142,7 @@ public class TicTacToe extends World
                            Label gameOver = new Label("Circle wins!", 100);
                            addObject(gameOver, 2, 2);
                            winSound.play();
-                           Greenfoot.stop();
+                           isGameOver = true;
                     }
                 //checks diagonally
                 else if((getObjectsAt(x,y,Circle.class).size() > 0 ||
@@ -140,7 +153,7 @@ public class TicTacToe extends World
                            Label gameOver = new Label("Circle wins!", 100);
                            addObject(gameOver, 2, 2);
                            winSound.play();
-                           Greenfoot.stop();
+                           isGameOver = true;
                     }
                 //checks diagonally
                 else if((getObjectsAt(x,y,Circle.class).size() > 0 ||
@@ -151,7 +164,7 @@ public class TicTacToe extends World
                            Label gameOver = new Label("Circle wins!", 100);
                            addObject(gameOver, 2, 2);
                            winSound.play();
-                           Greenfoot.stop();
+                           isGameOver = true;
                     }
                 //checks diagonally
                 else if(getObjectsAt(x+1,y,Circle.class).size() >  0 &&
@@ -161,7 +174,7 @@ public class TicTacToe extends World
                            Label gameOver = new Label("Circle wins!", 100);
                            addObject(gameOver, 2, 2);
                            winSound.play();
-                           Greenfoot.stop(); 
+                           isGameOver = true;
                         }
                 }
             }
@@ -201,6 +214,7 @@ public class TicTacToe extends World
                     changeTurn();
                     moveSound.play();
                 }
+                //if piece is there, error will occur
                 else{
                     errorSound.play();
                 }
@@ -215,6 +229,7 @@ public class TicTacToe extends World
                     changeTurn();
                     moveSound.play();
                 }
+                //if piece is there, error will occur
                 else{
                     errorSound.play();
                 }
