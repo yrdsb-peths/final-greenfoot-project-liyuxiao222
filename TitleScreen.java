@@ -37,7 +37,7 @@ public class TitleScreen extends World
         Label label2 = new Label("By: Liyu Xiao", 70);
         label2.setFillColor(Color.BLACK);
         addObject(label2,260,231);
-        Label label3 = new Label("Press space to start", 50);
+        Label label3 = new Label("Press <space> to start", 50);
         label3.setFillColor(Color.BLACK);
         addObject(label3,260,303);
         Label label4 = new Label("left click to put down peices", 30);

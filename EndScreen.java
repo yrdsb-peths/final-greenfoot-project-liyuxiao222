@@ -41,7 +41,7 @@ public class EndScreen extends World
         label.setFillColor(Color.BLACK);
         addObject(label,296,149);
         label.setLocation(310,108);
-        Label label2 = new Label("If yes press space", 50);
+        Label label2 = new Label("If yes press <space>", 50);
         label2.setFillColor(Color.BLACK);
         addObject(label2,111,218);
         label2.setLocation(164,206);
