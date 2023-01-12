@@ -33,9 +33,17 @@ public class TicTacToe extends World
             startTie();
         }
         play();
+        endGame();
+    }
+    
+    public void endGame(){
+        endTimer.mark();
         if(isGameOver && winSound.isPlaying()){
             endTimer.mark();
-            if(endTimer.millisElapsed() > 4000){
+            if(endTimer.millisElapsed() < 400){
+                return;
+            }
+            else{
                 EndScreen end = new EndScreen();
                 Greenfoot.setWorld(end);
             }
