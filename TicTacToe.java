@@ -17,8 +17,9 @@ public class TicTacToe extends World
     //whether or not game is over
     boolean isGameOver = false;
     
-    //timer for the transition from tic tac toe to end screen
-    SimpleTimer endTimer = new SimpleTimer();
+    //tracks how many wins each player has
+    int circleScore = 0;
+    int crossScore = 0;
     
     public TicTacToe()
     {   
@@ -35,18 +36,12 @@ public class TicTacToe extends World
         play();
         endGame();
     }
-    
+    //transitions to the end screen
     public void endGame(){
-        endTimer.mark();
         if(isGameOver && winSound.isPlaying()){
-            endTimer.mark();
-            if(endTimer.millisElapsed() < 400){
-                return;
-            }
-            else{
-                EndScreen end = new EndScreen();
-                Greenfoot.setWorld(end);
-            }
+            Greenfoot.delay(16);
+            EndScreen end = new EndScreen();
+            Greenfoot.setWorld(end);
         }
     }
         
