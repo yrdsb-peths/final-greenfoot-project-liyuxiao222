@@ -38,7 +38,7 @@ public class TicTacToe extends World
     }
     //transitions to the end screen
     public void endGame(){
-        if(isGameOver && winSound.isPlaying()){
+        if(isGameOver && winSound.isPlaying() || tieSound.isPlaying()){
             Greenfoot.delay(16);
             EndScreen end = new EndScreen();
             Greenfoot.setWorld(end);
@@ -190,7 +190,7 @@ public class TicTacToe extends World
         Label gameOver = new Label("Tie :(", 100);
         addObject(gameOver, 2, 2);
         tieSound.play();
-        Greenfoot.stop(); 
+        isGameOver = true;
     }
     
     
