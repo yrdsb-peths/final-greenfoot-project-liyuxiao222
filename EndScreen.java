@@ -20,13 +20,16 @@ public class EndScreen extends World
         prepare();
     }
     public void act(){
-        if(Greenfoot.isKeyDown("1")){
+        //sets it to game screen again
+        if(Greenfoot.isKeyDown("space")){
             TicTacToe gameWorld = new TicTacToe();
             Greenfoot.setWorld(gameWorld);
         }
+        //sets it to title screen
         if(Greenfoot.isKeyDown("2")){
-            TicTacToe gameWorld = new TicTacToe();
+            TitleScreen gameWorld = new TitleScreen();
             Greenfoot.setWorld(gameWorld);
+            Greenfoot.stop();
         }
     }
     /**
@@ -35,13 +38,16 @@ public class EndScreen extends World
     private void prepare()
     {
         Label label = new Label("Play Again?", 50);
+        label.setFillColor(Color.BLACK);
         addObject(label,296,149);
         label.setLocation(310,108);
         Label label2 = new Label("If yes press space", 50);
+        label2.setFillColor(Color.BLACK);
         addObject(label2,111,218);
         label2.setLocation(164,206);
         label2.setLocation(308,180);
         Label label3 = new Label("If no press 2", 50);
+        label3.setFillColor(Color.BLACK);
         addObject(label3,297,277);
         label3.setLocation(303,267);
     }
