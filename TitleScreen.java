@@ -40,7 +40,7 @@ public class TitleScreen extends World
         Label label3 = new Label("Press <space> to start", 50);
         label3.setFillColor(Color.BLACK);
         addObject(label3,260,303);
-        Label label4 = new Label("left click to put down peices", 30);
+        Label label4 = new Label("left click to put down pieces", 30);
         label4.setFillColor(Color.BLACK);
         addObject(label4,260,394);
     }
