@@ -17,10 +17,6 @@ public class TicTacToe extends World
     //whether or not game is over
     boolean isGameOver = false;
     
-    //tracks how many wins each player has
-    int circleScore = 0;
-    int crossScore = 0;
-    
     public TicTacToe()
     {   
         //makes the board
@@ -185,6 +181,7 @@ public class TicTacToe extends World
         
     //sound when a tie occurs
     GreenfootSound tieSound = new GreenfootSound("aww-8277.mp3");
+    
     //initiates a tie in the case of a tie
     public void startTie(){
         Label gameOver = new Label("Tie :(", 100);
