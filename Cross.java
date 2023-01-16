@@ -5,7 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * the boardpiece class
  * 
  * Liyu Xiao 
- * Jan 2023
+ * Jan 10 2023
  */
 public class Cross extends Actor
 {
